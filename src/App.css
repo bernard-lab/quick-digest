@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+  Note: The styles for this gradient grid background is heavily inspired by the creator of this amazing site (https://dub.sh) – all credits go to them! 
+*/
+
+.main {
+  width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  padding: 120px 24px 160px 24px;
+  pointer-events: none;
+
+  /* sunset orange to yellow */
+  /* background: linear-gradient(to bottom, #ffab91, #fff9c4); */
+  /* pastel green to white */
+  background: linear-gradient(to bottom, #c8e6c9, #ffffff);
+  /* lightgray 20 soft blue */
+  /* background: linear-gradient(to bottom, #e3f2fd, #f5f5f5); */
+  /* gray to navy blue*/
+  /* background: linear-gradient(to bottom, #bdc3c7, #2c3e50); */
+}
+
+@media screen and (max-width: 640px) {
+  .main {
+    padding: 0;
+  }
+}
+
+/* Tailwind Styles */
+
+.app {
+  @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;
+}
+
+.black_btn {
+  @apply rounded-full border border-black bg-green-950 py-1.5 px-5 text-sm text-white transition-all hover:border-green-700 hover:bg-transparent hover:text-green-800;
+}
+
+.head_text {
+  @apply mt-5 text-5xl font-extrabold leading-[1.15] text-green-950 sm:text-6xl text-center;
+}
+
+.orange_gradient {
+  @apply bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent;
+}
+
+.green_gradient {
+  @apply bg-gradient-to-r from-green-500 
+   via-green-900 to-green-500 bg-clip-text text-transparent;
+}
+
+.purple_gradient {
+  @apply bg-gradient-to-r from-[#8e78b8] via-[#4a30b1] to-[#8e78b8] bg-clip-text text-transparent;
+}
+
+.desc {
+  @apply mt-5 text-lg text-green-900 sm:text-xl text-center max-w-2xl;
+}
+
+.url_input {
+  @apply block w-full rounded-md border border-gray-200 bg-white py-2.5 pl-10 pr-12 text-sm shadow-lg font-satoshi font-medium focus:border-black focus:outline-none focus:ring-0;
+}
+
+.submit_btn {
+  @apply hover:border-green-500 hover:text-green-500 inset-y-0 flex w-10 items-center justify-center rounded border border-green-600 font-sans text-sm font-bold text-green-600;
+}
+
+.link_card {
+  @apply p-3 flex justify-start items-center flex-row bg-white border border-gray-200 gap-3 rounded-lg cursor-pointer;
+}
+
+.copy_btn {
+  @apply w-7 h-7 rounded-full bg-white/10 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur flex justify-center items-center cursor-pointer;
+}
+
+.blue_gradient {
+  @apply font-black bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent;
+}
+
+.summary_box {
+  @apply rounded-xl border border-gray-200 bg-white/20 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur p-4;
+}
